@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "RootViewController.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic)RootViewController *rootVC;
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
 
