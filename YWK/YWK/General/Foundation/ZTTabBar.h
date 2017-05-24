@@ -21,7 +21,7 @@
 
 @interface ZTTabBar : UITabBar
 
-@property (nonatomic, weak) id<ZTTabBarDelegate> delegate;
+@property (nonatomic, weak) id<ZTTabBarDelegate>delegate;
 @property(nonatomic,strong) UIView *cameraView;
 @property(nonatomic,strong) UIButton *cameraBtn;
 

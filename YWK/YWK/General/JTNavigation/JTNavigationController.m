@@ -194,6 +194,7 @@ static NSValue *jt_tabBarRectValue;
     self.popPanGesture.maximumNumberOfTouches = 1;
     self.backButtonImage = [UIImage imageNamed:@"返回"];
     
+    
 }
 
 

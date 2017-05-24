@@ -84,7 +84,6 @@
 {
     switch (sender.tag) {
         case 101:{
-            _weekSelf(weakSelf);
             if ([self.userName validate] && [self.passWord validate]) {
                 [ProgressHUDHandler showProgressHUD];
             }

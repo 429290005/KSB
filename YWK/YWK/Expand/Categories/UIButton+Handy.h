@@ -42,7 +42,7 @@
  *  设置Button具有Backgroundimage和title
  *
  *  @param image            背景图片
- *  @param selecetImage     选择后的背景图片
+ *  @param image_sel     选择后的背景图片
  *  @param title            title
  */
 - (void) setImage:(UIImage *)image selecetImage:(UIImage *)image_sel withTitle:(NSString *)title;

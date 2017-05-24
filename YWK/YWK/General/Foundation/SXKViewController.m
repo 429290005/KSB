@@ -32,6 +32,7 @@
 
 @property (nonatomic, strong) NSString *title1;
 
+
 @end
 
 @implementation SXKViewController
@@ -41,8 +42,6 @@
     // Do any additional setup after loading the view.
     
     [self initVCS];
-
-    
     [self setupData];
 
         if (DEFAULTS_GET_INTEGER(@"launchInteger") == 0) {
@@ -75,56 +74,56 @@
 - (void)initVCS{
     self.vc = [[HomeVC alloc] init];
     BaseNavigationVC * nav1 = [[BaseNavigationVC alloc] initWithRootViewController:self.vc];
-    BaseNavigationVC * nav2 = [[BaseNavigationVC alloc] initWithRootViewController:[[ClassifyVC alloc] init]];
-    BaseNavigationVC * nav4 = [[BaseNavigationVC alloc] initWithRootViewController:[[CommunityVC alloc] init]];
-    BaseNavigationVC * nav5 = [[BaseNavigationVC alloc] initWithRootViewController:[[MeVC alloc] init]];
+//    BaseNavigationVC * nav2 = [[BaseNavigationVC alloc] initWithRootViewController:[[ClassifyVC alloc] init]];
+//    BaseNavigationVC * nav4 = [[BaseNavigationVC alloc] initWithRootViewController:[[CommunityVC alloc] init]];
+//    BaseNavigationVC * nav5 = [[BaseNavigationVC alloc] initWithRootViewController:[[MeVC alloc] init]];
     
-    [nav1.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
-    [nav2.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
-    [nav4.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
-    [nav5.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
+//    [nav1.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
+//    [nav2.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
+//    [nav4.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
+//    [nav5.tabBarItem setTitlePositionAdjustment:UIOffsetMake(2, -3)];
 
     
     [self addOneChildViewController:nav1
                           WithTitle:@"首页"
                     normalImageName:@"TabBar1"
                   selectedImageName:@"TabBar1Sel"];
-    [self addOneChildViewController:nav2
-                          WithTitle:@"分类"
-                    normalImageName:@"TabBar2"
-                  selectedImageName:@"TabBar2Sel"];
+//    [self addOneChildViewController:nav2
+//                          WithTitle:@"分类"
+//                    normalImageName:@"TabBar2"
+//                  selectedImageName:@"TabBar2Sel"];
 //    [self addOneChildViewController:nav3
 //                          WithTitle:@"发布"
 //                    normalImageName:@"Lottery"
 //                  selectedImageName:@"Lottery_Sel"];
-    [self addOneChildViewController:nav4
-                          WithTitle:@"社区"
-                    normalImageName:@"TabBar4"
-                  selectedImageName:@"TabBar4Sel"];
-    [self addOneChildViewController:nav5
-                          WithTitle:@"我的"
-                    normalImageName:@"TabBar5"
-                  selectedImageName:@"TabBar5Sel"];
+//    [self addOneChildViewController:nav4
+//                          WithTitle:@"社区"
+//                    normalImageName:@"TabBar4"
+//                  selectedImageName:@"TabBar4Sel"];
+//    [self addOneChildViewController:nav5
+//                          WithTitle:@"我的"
+//                    normalImageName:@"TabBar5"
+//                  selectedImageName:@"TabBar5Sel"];
     
     //加载自定义TabBar
-    ZTTabBar *tabBar = [[ZTTabBar alloc] init];
-    tabBar.delegate = self;
-    tabBar.backgroundColor = [UIColor colorWithHexColorString:@"000000"];
-    [self setValue:tabBar forKey:@"tabBar"];
-    
-    //设置tabbar颜色，防止渲染
-    [[UITabBar appearance] setBarTintColor:[UIColor colorWithHexColorString:@"000000"]];
-    [[UITabBar appearance] setBackgroundColor:[UIColor colorWithHexColorString:@"000000"]];
-
-    //设置tabbar Title 字体颜色
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:APP_COLOR_GRAY_333333, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
-  
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
-    
-    UIView *view = [[UIView alloc] init];
-    view.backgroundColor = [UIColor colorWithHexColorString:@"000000"];
-    view.frame = self.tabBar.bounds;
-    [[UITabBar appearance] insertSubview:view atIndex:0];
+//    ZTTabBar *tabBar = [[ZTTabBar alloc] init];
+//    tabBar.delegate = self;
+//    tabBar.backgroundColor = [UIColor colorWithHexColorString:@"000000"];
+//    [self setValue:tabBar forKey:@"tabBar"];
+//    
+//    //设置tabbar颜色，防止渲染
+//    [[UITabBar appearance] setBarTintColor:[UIColor colorWithHexColorString:@"000000"]];
+//    [[UITabBar appearance] setBackgroundColor:[UIColor colorWithHexColorString:@"000000"]];
+//
+//    //设置tabbar Title 字体颜色
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:APP_COLOR_GRAY_333333, NSForegroundColorAttributeName, nil] forState:UIControlStateSelected];
+//  
+//    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil] forState:UIControlStateNormal];
+//    
+//    UIView *view = [[UIView alloc] init];
+//    view.backgroundColor = [UIColor colorWithHexColorString:@"000000"];
+//    view.frame = self.tabBar.bounds;
+//    [[UITabBar appearance] insertSubview:view atIndex:0];
 
     
 }
